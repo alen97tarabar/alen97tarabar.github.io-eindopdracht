@@ -34,18 +34,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item active">
-        <a class="nav-link" href="BlockBreakerWebV1.1/Showcase.html">SHOWCASE. <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="BlockBreakerWebV1.1/Showcase.html">CERTIFICATEN. <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">OTHER.</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          LANGUAGE.
+          TIPS.
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: grey;">
-          <a class="dropdown-item" href="Home-EN.html"><img alt="engels" class="flag" src="Images/EN-ICON.jpg" width="35" height="30">.English</a>
-          <a class="dropdown-item" href="Home.html"><img alt="nederlands" class="flag" src="Images/NL-ICON.jpg" width="35" height="30">.Dutch</a>
+          <a class="dropdown-item" href="frontend.php">.FRONTEND</a>
+          <a class="dropdown-item" href="backend.php">.BACKEND</a>
         </div>
       </li>
     </ul>
@@ -68,15 +68,15 @@ $(document).ready(function(){
 <div id="container">
 
 <div class="column-left"> 
-	<div id="column-left-link"> <a href="Profile.html">.PROFILE</a> </div>
+	<div id="column-left-link"> <a href="applicaties.php">.APPLICATIES</a> </div>
 </div>
 
 <div class="column-center">
-	<div id="column-center-link"> <a href="Resume.html" target="_blank">.RESUME.</a> </div>
+	<div id="column-center-link"> <a href="Resume.html" target="_blank">.CV.</a> </div>
 </div>
 
 <div class="column-right"> 
-	<div id="column-right-link"> <a href="#section2">CONTACT.</a> </div>
+	<div id="column-right-link"> <a href="#section2">FORMULIER.</a> </div>
 </div>
 
 </div>
@@ -85,13 +85,13 @@ $(document).ready(function(){
 
 </div>
 
+<div class="section2">
 <?php
-echo "<center>";
 
-    include('review_form.php');
+include('review_form.php');
 
-echo "</center>";
 ?>
+</div>
 
 <div class="footer" style="position: fixed; left: 0; bottom: 0; width: 100%; height: 5%; background-color: #279e94; color: white; text-align: center;">
 <p>LinkedIn <a href="https://www.linkedin.com/in/alen-tarabar-543a55159/" style="font-size: 2.2rem !important;" class="fab fa-linkedin"></a> Gmail <a href="mailto:alen97tarabar@gmail.com" style="font-size: 2.2rem !important;" class="fas fa-envelope"></a></p>
