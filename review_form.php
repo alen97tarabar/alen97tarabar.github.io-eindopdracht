@@ -28,6 +28,8 @@ input {
 
 </style>
 
+<h1> PHP moet hieronder staan </h1>
+
 <?php
 
 include('db_connection.php');
