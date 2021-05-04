@@ -1,1 +1,7 @@
-{}
+{
+    "name": "alen/alen97tarabar.github.io-eindopdracht",
+    "description": "php",
+    "require": {
+        "php": "^7.3"
+    }
+}
