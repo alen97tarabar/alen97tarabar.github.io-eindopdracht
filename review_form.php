@@ -9,11 +9,12 @@
 
 body {
     font-weight: bold;
+    color: white;
 }
 form { 
     display: table;      
 }
-p { 
+.tableForm { 
     display: table-row; 
 }
 label { 
@@ -59,31 +60,31 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <br>
 <form id="formulier" action="review_form_stmt_insert.php" method="post">
-<p>
+<p class="tableForm">
     <label for="naam"> Naam: </label>
     <input id="naam" type="text" name="naam">
 </p>
-<p>
+<p class="tableForm">
     <label for="email"> Email: </label>
     <input id="email" type="text" name="email">
 </p>
-<p>
+<p class="tableForm">
     <label for="functie"> Functie: </label>
     <input id="functie" type="text" name="functie">
 </p>
-<p>
+<p class="tableForm">
     <label for="datum"> Datum: </label>
     <input id="datum" type="text" name="datum" value="yyyy/mm/dd">
 </p>
-<p>
+<p class="tableForm">
     <label for="commentaar"> Commentaar/Feedback: </label>
     <textarea id="commentaar" type="text" name="commentaar" rows="8" cols="50"></textarea>
 </p>
-<p>
+<p class="tableForm">
     <label for="rating_cv"> Beoordeling CV: </label>
     <input type="text" name="rating_cv">
 </p>
-<p>
+<p class="tableForm">
     <label for="rating_website"> beoordeling Website: </label>
     <input type="text" name="rating_website">
 </p>
