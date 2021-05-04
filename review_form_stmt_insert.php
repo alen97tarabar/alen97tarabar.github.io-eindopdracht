@@ -30,5 +30,7 @@ if (isset($_POST['submit'])){
     {
         echo "Error: " . $e->getMessage();
     }
+
+    $db->close();
 }
 ?>
