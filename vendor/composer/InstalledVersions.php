@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '85134efd6528d8a7279554cfd5644ded7c55196b',
+    'reference' => 'a2ab72821886886148e0acdb19d72d845eb9e6e1',
     'name' => 'alen/alen97tarabar.github.io-eindopdracht',
   ),
   'versions' => 
@@ -44,7 +44,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '85134efd6528d8a7279554cfd5644ded7c55196b',
+      'reference' => 'a2ab72821886886148e0acdb19d72d845eb9e6e1',
     ),
   ),
 );
