@@ -26,9 +26,14 @@ input {
     vertical-align: middle;
 }
 
-</style>
+@media all and (max-width: 300px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
 
-<h1> PHP moet hieronder staan </h1>
+</style>
 
 <?php
 
@@ -53,7 +58,7 @@ $formRatingWebsite = $row['rating_website'];
 <h1> Beoordeling Form </h1>
 <br>
 <br>
-<form action="review_form_stmt_insert.php" method="post">
+<form id="formulier" action="review_form_stmt_insert.php" method="post">
 <p>
     <label for="naam"> Naam: </label>
     <input id="naam" type="text" name="naam">

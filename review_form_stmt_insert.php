@@ -24,7 +24,7 @@ if (isset($_POST['submit'])){
         $stmtInsert->bindParam(':rating_website', $ratingWebsiteInsert, PDO::PARAM_STR);
 
         $stmtInsert->execute();
-        echo "Bedankt voor de review! <br> <a href='index.php'> Homepage </a>";
+        echo "<h1> Bedankt voor de review! </h1> <br> <a href='index.php'> HOME </a>";
 
     } catch(PDOException $e)
     {
