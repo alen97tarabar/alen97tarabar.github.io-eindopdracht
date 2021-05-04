@@ -68,7 +68,7 @@ $(document).ready(function(){
 <div id="container">
 
 <div class="column-left"> 
-	<div id="column-left-link"> <a href="applicaties.php">.APPLICATIES</a> </div>
+	<div id="column-left-link"> <a href="applicaties.html">.APPLICATIES</a> </div>
 </div>
 
 <div class="column-center">

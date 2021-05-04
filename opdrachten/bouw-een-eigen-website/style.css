@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    width: 98%;
+    justify-content: space-around;
+    margin: 1em;
+}
+
+body {
+    background-image: url("lined_paper.png");
+    font-family: Arial, sans-serif;
+}
+
+.navButton {
+    border: none;
+    font-family: arial, sans-serif;
+    box-shadow: 0px 2px 2px 0px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.navButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 2px;
+}
+
+.navMenu {
+    border: none;
+    font-family: arial, sans-serif;
+    box-shadow: 0px 2px 2px 0px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;  
+}
+
+.navMenu:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 2px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu {
+    position: fixed;
+    top: 30%;
+    height: 400px;
+    width: 25%;
+    box-shadow: 0px 0px 2px 1px;
+    text-align: center;
+    background-color: white;
+}
+
+.containerSkill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemSkill {
+    position: relative;
+    margin: 80px;
+    height: 670px;
+    width: 60%;
+    left: 10%;
+    box-shadow: 0px 0px 2px 1px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.orange {
+    background-color: darkorange;
+    width: 30%;
+    margin: 10px;
+    font-size: larger;
+    align-self: center;
+}
+
+.itemContact {
+    position: relative;
+    top: 90px;
+    height: 400px;
+    width: 50%;
+    box-shadow: 0px 0px 2px 1px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    position: relative;
+    top: 90px;
+    height: 400px;
+    width: 25%;
+    box-shadow: 0px 0px 2px 1px;
+    text-align: center;
+    background-color: white;
+}
+
+#background {
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 99%;
+    text-align: center;
+    box-shadow: 0px -1px 1px 1px;
+    margin: 0px 0px 10px 0px;
+    background-color: white;
+}
+
+.tableRow {
+    background-color: darkorange;
+}

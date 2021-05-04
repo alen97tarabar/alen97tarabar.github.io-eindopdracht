@@ -1,0 +1,89 @@
+body {
+    font-family: arial, sans-serif;
+}
+
+.textbutton {
+    border: none;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 12px;
+    padding: 1px 1px 2px 1px;
+}
+
+.RoundLinkButton {
+    color: white;
+}
+
+.round {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px 0px 0px 25px;
+    border: solid 4px gray;
+}
+
+.round:hover {
+    border: solid 4px #3fcaf8;
+    box-shadow: 0px 1px 7px 0px;
+    cursor: pointer;
+}
+
+.round:hover ~ .textbutton {
+    background-color: #3fcaf8;
+}
+
+.html-css-adventurer {
+    position: relative;
+    left: 700px;
+    width: 200px;
+    height: 95px;
+}
+
+.rekenmachine {
+    position: relative;
+    left: 360px;
+    top: 40px;
+    width: 170px;
+}
+
+.php-adventurer {
+    position: relative;
+    bottom: 80px;
+    left: 1060px;
+    width: 170px;
+}
+
+.javascript-adventurer {
+    position: relative;
+    left: 1060px;
+    top: 10px;
+    width: 170px;
+}
+
+.javascript-challenge {
+    position: relative;
+    left: 870px;
+    top: 50px;
+    width: 180px;
+}
+
+.project-base-camp {
+    position: relative;
+    left: 1255px;
+    bottom: 70px;
+    width: 150px;
+}
+
+.piramide {
+    position: relative;
+    left: 250px;
+    bottom: 188px;
+    width: 150px;
+}
+
+.tabel {
+    position: relative;
+    left: 550px;
+    bottom: 500px;
+    width: 150px;
+}

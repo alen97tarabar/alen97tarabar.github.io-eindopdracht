@@ -1,0 +1,28 @@
+#buttonColor {
+    background-color: cadetblue;
+    font-size: xx-large;
+    border-radius: 12px;
+    border: solid 6px darkgray;
+}
+
+#buttonBackground {
+    background-color: cadetblue;
+    font-size: xx-large;
+    border-radius: 12px;
+    border: solid 6px darkgray;
+}
+
+#buttonTitle {
+    background-color: cadetblue;
+    font-size: xx-large;
+    border-radius: 12px;
+    border: solid 6px darkgray;
+}
+
+#bodyColor {
+    background-color: gray;
+}
+
+#titleColor {
+    color: blue;
+}

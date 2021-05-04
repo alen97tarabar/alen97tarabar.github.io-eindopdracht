@@ -1,0 +1,79 @@
+body {
+    width: fit-content;
+}
+
+#playerOneDiv {
+    display: block;
+}
+
+#result {
+    font-size: xxx-large;
+    font-weight: bold;
+    position: relative;
+    top: 140px;
+    left: 25%;
+    width: 400px;
+}
+
+#resetButton {
+    position: relative;
+    border: none;
+    background-color: orangered;
+    border-radius: 12px;
+    top: 300px;
+    left: 45%;
+    font-size: xx-large;
+}
+
+#resetButton:hover {
+    cursor: pointer;
+    border: solid black;
+}
+
+#cards {
+    position: relative;
+    top: 200px;
+    left: 25%;
+}
+
+#rock {
+    border: none;
+    height: 175px;
+    width: 175px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 38px 65px 0px;
+}
+
+#rock:hover {
+    cursor: grab;
+    color: blue;
+}
+
+#paper {
+    border: none;
+    height: 175px;
+    width: 175px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 38px 65px 0px;
+}
+
+#paper:hover {
+    cursor: grab;
+    color: blue;
+}
+
+#scicsors {
+    border: none;
+    height: 175px;
+    width: 175px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 38px 65px 0px;
+}
+
+#scicsors:hover {
+    cursor: grab;
+    color: blue;
+}
