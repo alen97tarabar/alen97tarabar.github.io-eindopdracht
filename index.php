@@ -92,8 +92,6 @@ include('review_form.php');
 
 ?>
 
-<a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a>
-
 </div>
 <br>
 <center>
