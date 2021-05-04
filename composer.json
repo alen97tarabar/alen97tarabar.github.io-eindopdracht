@@ -21,7 +21,7 @@
     },
     "non-feature-branches": ["RELEASE_.*"],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">^7.3.27"
     },
     "require-dev": {
         "satooshi/php-coveralls": "~0.6",

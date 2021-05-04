@@ -85,13 +85,13 @@ $(document).ready(function(){
 
 </div>
 
-<div id="section2" style="margin: 25% 0% 0% 0%; color: white; text-shadow: 7px 7px 2px dimgrey;">
-<center>
 <?php
-    include('review_form.php')
+echo "<center>";
+
+    include('review_form.php');
+
+echo "</center>";
 ?>
-</center>
-</div>
 
 <div class="footer" style="position: fixed; left: 0; bottom: 0; width: 100%; height: 5%; background-color: #279e94; color: white; text-align: center;">
 <p>LinkedIn <a href="https://www.linkedin.com/in/alen-tarabar-543a55159/" style="font-size: 2.2rem !important;" class="fab fa-linkedin"></a> Gmail <a href="mailto:alen97tarabar@gmail.com" style="font-size: 2.2rem !important;" class="fas fa-envelope"></a></p>
