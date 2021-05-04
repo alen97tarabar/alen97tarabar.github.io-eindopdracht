@@ -53,10 +53,9 @@ $formRatingCv = $row['rating_cv'];
 $formRatingWebsite = $row['rating_website'];
 
 ?>
-<a href="index.php">Terug </a>
 <br>
 <br>
-<h1> Beoordeling Form </h1>
+<h1> Beoordeling Form </h1> <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a>
 <br>
 <br>
 <form id="formulier" action="review_form_stmt_insert.php" method="post">
@@ -79,15 +78,18 @@ $formRatingWebsite = $row['rating_website'];
 <p class="tableForm">
     <label for="commentaar"> Commentaar/Feedback: </label>
     <textarea id="commentaar" type="text" name="commentaar" rows="8" cols="50"></textarea>
-
+</p>
+<p class="tableForm">
     <label for="rating_cv"> Beoordeling CV: </label>
     <input type="text" name="rating_cv">
-
+</p>
+<p class="tableForm">
     <label for="rating_website"> beoordeling Website: </label>
     <input type="text" name="rating_website">
 </p>
     <input type="submit" name="submit" value="OK">
-    <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a>
 </form>
+<br>
+<br>
 </body>
 </html>
