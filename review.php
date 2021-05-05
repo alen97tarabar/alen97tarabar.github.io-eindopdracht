@@ -37,7 +37,7 @@ $stmtTotalWebsite->execute();
 <h2> Lijst </h2>
 <?php
     echo "Totale cv cijfer: " . $stmtTotalCv;
-    echo "Totale Website cijfer: " . $stmtTotalWebsite
+    echo "Totale Website cijfer: " . $stmtTotalWebsite;
 ?>
 <div class="container">
 
