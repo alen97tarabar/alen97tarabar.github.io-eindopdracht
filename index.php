@@ -68,7 +68,7 @@ $(document).ready(function(){
 <div id="container">
 
 <div class="column-left"> 
-	<div id="column-left-link"> <a href="applicaties.html">.APPLICATIES</a> </div>
+	<div id="column-left-link"> <a href="opdrachten/applicaties.html" target="_blank">.APPLICATIES</a> </div>
 </div>
 
 <div class="column-center">
@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 </div>
 
-<div class="section2">
+<div id="section2">
 <?php
 
 include('review_form.php');

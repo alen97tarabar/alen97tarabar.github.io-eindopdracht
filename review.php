@@ -26,7 +26,12 @@ $stmt->execute();
 <br>
 <br>
 <h2> Lijst </h2>
-<table>
+
+<div class="container">
+
+<div class="item" style="width: 60%;">
+<h2>Reviews</h2>
+<table style="width: 100%; height: 300px;">
     <tr>
         <th> Naam </th>
         <th> Email </th>
@@ -53,5 +58,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     </tr>
 </table>
+</div>
+</div>
 </body>
 </html>

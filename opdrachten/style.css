@@ -1,5 +1,6 @@
 body {
     font-family: arial, sans-serif;
+    overflow: hidden;
 }
 
 .textbutton {
@@ -7,11 +8,11 @@ body {
     background-color: darkgrey;
     color: white;
     border-radius: 12px;
-    padding: 1px 1px 2px 1px;
 }
 
 .RoundLinkButton {
     color: white;
+    font-family: Arial, sans-serif;
 }
 
 .round {
@@ -32,7 +33,7 @@ body {
     background-color: #3fcaf8;
 }
 
-.html-css-adventurer {
+.website {
     position: relative;
     left: 700px;
     width: 200px;
@@ -46,28 +47,28 @@ body {
     width: 170px;
 }
 
-.php-adventurer {
+.wisselgeld {
     position: relative;
     bottom: 80px;
     left: 1060px;
     width: 170px;
 }
 
-.javascript-adventurer {
+.google {
     position: relative;
     left: 1060px;
     top: 10px;
     width: 170px;
 }
 
-.javascript-challenge {
+.KleurJeWebsite {
     position: relative;
     left: 870px;
     top: 50px;
     width: 180px;
 }
 
-.project-base-camp {
+.steenPapierSchaar {
     position: relative;
     left: 1255px;
     bottom: 70px;
