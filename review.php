@@ -22,13 +22,23 @@ include('db_connection.php');
 $stmt = $db->prepare("SELECT naam, email, functie, datum, rating_cv, rating_website FROM formulier");
 $stmt->execute();
 
+$stmtTotalCv = $db->prepare("SELECT SUM(rating_cv) AS totalCv FROM formulier");
+$stmtTotalCv->execute();
+
+$stmtTotalWebsite = $db->prepare("SELECT SUM(rating_website) AS totalWebsite FROM formulier");
+$stmtTotalWebsite->execute();
+
+
 ?>
 
 <h1> Beoordelingen </h1>
 <br>
 <br>
 <h2> Lijst </h2>
-
+<?php
+    echo "Totale cv cijfer: " . $stmtTotalCv;
+    echo "Totale Website cijfer: " . $stmtTotalWebsite
+?>
 <div class="container">
 
 <div class="item" style="width: 60%;">
