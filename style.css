@@ -286,11 +286,15 @@ div.centered {
 }
 
 tr {
-	background-color: darkorange;
+	background-color: lightblue;
 }
 
 th {
-	background-color: darkorange;
+	background-color: lightblue;
+}
+
+th {
+	background-color: lightblue;
 }
 
 .container {
