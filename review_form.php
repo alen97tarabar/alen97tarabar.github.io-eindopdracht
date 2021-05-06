@@ -89,7 +89,7 @@ $formRatingWebsite = $row['rating_website'];
 
 ?>
 
-<form id="formulier" action="review_form_stmt_insert.php" style="0px 0px 0px 15px" method="post">
+<form id="formulier" action="review_form_stmt_insert.php" method="post">
 <hr> <h1> Beoordeling Form <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a> </h1>
 <div class="form-row">
 <div class="col-md-2 mb-1">
