@@ -53,9 +53,13 @@ input.star-5:checked ~ label.star:before {
   text-shadow: 0 0 20px #952;
 }
 
-input.star-1:checked ~ label.star:before { color: #F62; }
+input.star-1:checked ~ label.star:before { 
+    color: #F62; 
+}
 
-label.star:hover { transform: rotate(-15deg) scale(1.3); }
+label.star:hover { 
+    transform: rotate(-15deg) scale(1.3); 
+}
 
 label.star:before {
   content: '\f006';
@@ -89,6 +93,9 @@ $formRatingWebsite = $row['rating_website'];
 
 ?>
 
+<br>
+<br>
+<br>
 <form id="formulier" action="review_form_stmt_insert.php" method="post">
 <hr> <h1> Beoordeling Form <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a> </h1>
 <div class="form-row">
@@ -132,7 +139,5 @@ $formRatingWebsite = $row['rating_website'];
     </div>
 </div>
 </form>
-<br>
-<br>
 </body>
 </html>
