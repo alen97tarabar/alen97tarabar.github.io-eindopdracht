@@ -29,11 +29,11 @@ $stmt->execute();
 <br>
 <h2> Lijst </h2>
 <a href="#cijfer">Gemiddelde cijfer </a>
-<div class="container">
+<div class="container" style="height: 100% !important;">
 
-<div class="item" style="width: 60%;">
+<div class="item" style="width: 60%; height: 100% !important;">
 <h2>Reviews</h2>
-<table style="width: 100%; height: 300px;">
+<table style="width: 100%; height: 100% !important;">
     <tr>
         <th> Naam </th>
         <th> Email </th>
