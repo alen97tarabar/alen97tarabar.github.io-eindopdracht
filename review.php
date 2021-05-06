@@ -28,11 +28,11 @@ $stmt->execute();
 <br>
 <br>
 <h2> Lijst </h2>
+<a href="#cijfer">Gemiddelde cijfer </a>
 <div class="container">
 
 <div class="item" style="width: 60%;">
 <h2>Reviews</h2>
-<a href="#cijfer">Gemiddelde cijfer </a>
 <table style="width: 100%; height: 300px;">
     <tr>
         <th> Naam </th>
@@ -67,7 +67,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     $aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
 
-    echo "<h2 id='#cijfer'> Gemiddelde cijfer </h2> <br> website: " . ($totaalReviewRatingWebsite / $aantalRows) . " <br> CV: " . ($totaalReviewRatingCV / $aantalRows);
+    echo "<h2 id='cijfer'> Gemiddelde cijfer </h2> <br> website: " . ($totaalReviewRatingWebsite / $aantalRows) . " <br> CV: " . ($totaalReviewRatingCV / $aantalRows);
 
 ?>
 
