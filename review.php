@@ -22,6 +22,11 @@ include('db_connection.php');
 $stmt = $db->prepare("SELECT naam, email, functie, datum, rating_cv, rating_website FROM formulier");
 $stmt->execute();
 
+$totaalReviewRatingWebsite = $db->query("SELECT SUM(rating_website) AS total FROM formulier")->fetchColumn();
+$totaalReviewRatingCV = $db->query("SELECT SUM(rating_cv) AS total FROM formulier")->fetchColumn();
+
+$aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
+
 ?>
 
 <h1> Beoordelingen </h1>
@@ -54,11 +59,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     echo "<td>" . $naam . "</td> <td>" . $email . "</td> <td>" . $functie . "</td> <td>" . $datum . "</td> <td>" . $ratingCv . "</td> <td>" . $ratingWebsite . "</td> <tr>";
 }
-
-$totaalReviewRatingWebsite = $db->query("SELECT SUM(rating_website) AS total FROM formulier")->fetchColumn();
-$totaalReviewRatingCV = $db->query("SELECT SUM(rating_cv) AS total FROM formulier")->fetchColumn();
-
-$aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
 
 echo "Gemiddelde cijfer website: " . ($totaalReviewRatingWebsite / $aantalRows) . " CV: " ($totaalReviewRatingCV / $aantalRows);
 
