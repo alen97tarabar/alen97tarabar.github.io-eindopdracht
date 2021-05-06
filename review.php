@@ -23,7 +23,7 @@ $stmt = $db->prepare("SELECT naam, email, functie, datum, rating_cv, rating_webs
 $stmt->execute();
 
 $totaalReviewRatingWebsite = $db->query("SELECT SUM(rating_website) AS total FROM formulier")->fetchColumn();
-$totaalReviewRatingCV = $db->query("SELECT SUM(rating_cv) AS total FROM formulier")->fetchColumn();
+$totaalReviewRatingCV = $db->query("SELECT SUM(rating_cv) AS totalCv FROM formulier")->fetchColumn();
 
 $aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
 
