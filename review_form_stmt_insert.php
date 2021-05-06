@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
         $ratingWebsiteInsert = $_POST['star'];
 
         $stmtInsert = $db->prepare("INSERT INTO formulier
-        (naam, email, functie, datum, rating_cv, rating_website)
+        (naam, email, functie, datum, commentaar, rating_cv, rating_website)
         VALUES (:naam, :email, :functie, :datum, :commentaar, :rating_cv, :rating_website);"); 
 
         $stmtInsert->bindParam(':naam', $naamInsert, PDO::PARAM_STR);
