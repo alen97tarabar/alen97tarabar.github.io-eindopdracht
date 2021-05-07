@@ -7,6 +7,11 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/060b795035.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <style>
@@ -51,9 +56,17 @@ $stmt->execute();
     </ul>
   </div>
 </nav>
+
+<script>
+$(document).ready(function(){
+  $(".navbar-toggler").click(function(){
+    $("#container").toggle(1000);
+  });
+});
+</script>
+
 <br>
-<h2> Lijst </h2>
-<a href="#cijfer">Gemiddelde cijfer </a>
+<a href="#cijfer" style="color: black">Gemiddelde cijfer </a>
 <div class="container">
 
 <div class="item">
