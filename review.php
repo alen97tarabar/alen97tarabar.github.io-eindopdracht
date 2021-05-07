@@ -33,7 +33,7 @@ $stmt->execute();
 
 <div class="item" style="width: 60%; height: 100% !important;">
 <h2>Reviews</h2>
-<table style="width: 100%; height: 100% !important;">
+<table class="table table-sm" style="width: 100%; height: 100% !important;">
     <tr>
         <th> Naam </th>
         <th> Email </th>
