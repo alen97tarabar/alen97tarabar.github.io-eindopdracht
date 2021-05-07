@@ -65,27 +65,18 @@ $(document).ready(function(){
   <h1>Alen Tarabar</h1>
 </header>
 
-<div id="container">
+<div class="flex-container">
 
-<div class="column-left"> 
-	<div id="column-left-link"> <a href="opdrachten/applicaties.html" target="_blank">.APPLICATIES</a> </div>
-</div>
-
-<div class="column-center">
-	<div id="column-center-link"> <a href="Resume.html" target="_blank">.CV.</a> </div>
-</div>
-
-<div class="column-right"> 
-	<div id="column-right-link"> <a href="#section2">FORMULIER.</a> </div>
-</div>
+<div class="flex-links"> <a class="btn btn-primary btn-lg" href="opdrachten/applicaties.html" target="_blank">.APPLICATIES</a> </div> 
+<div class="flex-center"> <a class="btn btn-primary btn-lg" href="Resume.html" target="_blank">.CV.</a> </div>
+<div class="flex-rechts"> <a class="btn btn-primary btn-lg" href="#section2">FORMULIER.</a> </div>
 
 </div>
 
 <div class="main" id="section1">
 
-</div>
-
 <div id="section2">
+<hr> <h1 style="text-shadow: 3px 3px black;"> Beoordeling Form <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a> </h1>
 <?php
 
 include('review_form.php');

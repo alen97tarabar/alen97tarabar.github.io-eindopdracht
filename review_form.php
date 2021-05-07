@@ -97,7 +97,6 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <br>
 <form id="formulier" action="review_form_stmt_insert.php" method="post">
-<hr> <h1> Beoordeling Form <a href="#"> <i class="fas fa-angle-double-up" style="font-size: 3rem"></i> </a> </h1>
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
@@ -112,7 +111,6 @@ $formRatingWebsite = $row['rating_website'];
     <label for="datum"> Datum: </label>
     <input id="datum" type="date" class="form-control is-valid" name="datum" value="yyyy-mm-dd" required>
       <br>
-      <input type="submit" class="btn btn-primary" name="submit" value="Klaar">
 </div>
 <div class="col-md-4 mb-5">
     <label for="commentaar"> Commentaar/Feedback: </label>
@@ -136,8 +134,15 @@ $formRatingWebsite = $row['rating_website'];
     <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
     <label class="star star-1" for="star-1"></label>
 </div>
+<br>
+<center>
+<input type="submit" class="btn btn-primary" name="submit" value="Klaar">
+</center>
     </div>
 </div>
 </form>
+<br>
+<br>
+<br>
 </body>
 </html>
