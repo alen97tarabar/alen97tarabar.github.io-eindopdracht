@@ -8,10 +8,15 @@
 //$db = new PDO($dsn, $user, $password);
 
 //remote connection
-$dsn = 'mysql:dbname=HINVquFDbs;host=remotemysql.com';
-$user = 'HINVquFDbs';
-$password = 'BTySh59Ugr';
 
-$db = new PDO($dsn, $user, $password);
+try {
+    $dsn = 'mysql:dbname=HINVquFDbs;host=remotemysql.com';
+    $user = 'HINVquFDbs';
+    $password = 'BTySh59Ugr';
 
+    $db = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
 ?>

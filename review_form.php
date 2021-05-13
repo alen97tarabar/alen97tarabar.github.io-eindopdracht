@@ -118,7 +118,7 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <div class="col-md-1 mb-6">
     <label for="rating_cv"> Beoordeling CV (1-10): </label>
-    <input type="number" class="form-control is-valid" name="rating_cv" required>
+    <input type="number" class="form-control is-valid" min="1" max="10" name="rating_cv" required>
 </div>
 <div class="col-md-1 mb-7">
     <label for="rating_website"> Beoordeling Website: </label>
@@ -136,6 +136,15 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <br>
 <center>
+<?php 
+
+if (isset($_POST['star'])) {
+
+} else {
+    echo "<br> Vergeet niet de website beoordeling!";
+}
+
+?>
 <input type="submit" class="btn btn-primary" name="submit" value="Klaar">
 </center>
     </div>
