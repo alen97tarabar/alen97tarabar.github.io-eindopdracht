@@ -145,7 +145,7 @@ if (isset($_POST['star'])) {
 }
 
 ?>
-<input type="submit" class="btn btn-primary" name="submit" <?php if (!isset($_POST['star'])) { ?> disabled <?php   } ?> value="Klaar">
+<input type="submit" class="btn btn-primary" name="submit" <?php if (!isset($_POST['star'])) { ?> disabled <?php   } else { ?> enabled <?php } ?> value="Klaar">
 </center>
     </div>
 </div>
