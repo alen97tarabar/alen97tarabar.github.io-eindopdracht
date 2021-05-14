@@ -126,29 +126,35 @@ $formRatingWebsite = $row['rating_website'];
 <div class="col-md-1 mb-7">
     <label for="rating_website"> Beoordeling Website: </label>
 <div class="stars">
-    <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
+    <input class="star star-5" id="star-5" type="radio" name="star" required value="5"/>
     <label class="star star-5" for="star-5"></label>
-    <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
+    <input class="star star-4" id="star-4" type="radio" name="star" required value="4"/>
     <label class="star star-4" for="star-4"></label>
-    <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
+    <input class="star star-3" id="star-3" type="radio" name="star" required value="3"/>
     <label class="star star-3" for="star-3"></label>
-    <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
+    <input class="star star-2" id="star-2" type="radio" name="star" required value="2"/>
     <label class="star star-2" for="star-2"></label>
-    <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
+    <input class="star star-1" id="star-1" type="radio" name="star" required value="1"/>
     <label class="star star-1" for="star-1"></label>
 </div>
 <br>
 <center>
-<?php 
-if (isset($_POST['star'])) {
-    echo '<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">';
- } else {
-     echo "Vul alles goed in...";
- }
-?>
+<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
 </center>
     </div>
 </div>
+<script type="text/javascript">
+$(function(){
+    var requiredCheckboxes = $('.star :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
+</script>
 </form>
 <br>
 <br>
