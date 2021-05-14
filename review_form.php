@@ -104,9 +104,11 @@ $formRatingWebsite = $row['rating_website'];
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
     <input id="naam" type="text" class="form-control is-valid" name="naam" required>
+    <span class="error">* <?php echo $nameErr;?></span>
 
     <label for="email"> Email: </label>
     <input id="email" type="email" class="form-control is-valid" name="email" required>
+    <span class="error">* <?php echo $emailErr;?></span>
 
     <label for="functie"> Functie: </label>
     <input id="functie" type="text" class="form-control is-valid" name="functie" required>
@@ -140,18 +142,32 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <center>
 <input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
-<?php 
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
 
-if (isset($_POST['submit'])) {
-    try {
-        if (!is_numeric($_POST['naam'])) {
-        throw new Exception("Input moet een valide getal zijn");
-        }
-    } catch (Exception $x) {
-        echo "Verkeerde input gevangen: " . $x->getMessage() . PHP_EOL;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
     }
-}
+  }
 
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+}
 ?>
 </center>
     </div>
