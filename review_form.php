@@ -103,15 +103,16 @@ $formRatingWebsite = $row['rating_website'];
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
-    <input id="naam" type="text" class="form-control is-valid" name="naam">
+    <input id="naam" type="text" class="form-control is-valid" name="naam" required>
     <span class="error">* <?php echo $nameErr;?></span>
 
     <label for="email"> Email: </label>
-    <input id="email" type="email" class="form-control is-valid" name="email">
+    <input id="email" type="email" class="form-control is-valid" name="email" required>
     <span class="error">* <?php echo $emailErr;?></span>
 
     <label for="functie"> Functie: </label>
     <input id="functie" type="text" class="form-control is-valid" name="functie" required>
+    <span class="error">* <?php echo $functieErr;?></span>
 
     <label for="datum"> Datum: </label>
     <input id="datum" type="date" class="form-control is-valid" name="datum" value="yyyy-mm-dd" required>
@@ -120,6 +121,7 @@ $formRatingWebsite = $row['rating_website'];
 <div class="col-md-4 mb-5">
     <label for="commentaar"> Commentaar/Feedback: </label>
     <textarea id="commentaar" type="text" class="form-control is-valid" name="commentaar" pattern="[A-Za-z0-9_]{1,15}" rows="8" cols="50"></textarea>
+    <span class="error">* <?php echo $commentErr;?></span>
 </div>
 <div class="col-md-1 mb-6">
     <label for="rating_cv"> Beoordeling CV (1-10): </label>
@@ -159,12 +161,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
+    $emailErr = "Email is Verplicht";
   } else {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
+    }
+  }
+
+  if (empty($_POST["functie"])) {
+    $functieErr = "Functie is Verplicht";
+  } else {
+    $functie = test_input($_POST["functie"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$functie)) {
+      $functieErr = "Only letters and white space allowed";
+    }
+  }
+
+  if (empty($_POST["commentaar"])) {
+    $commentErr = "Commentaar is Verplicht";
+  } else {
+    $comment = test_input($_POST["commentaar"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
+      $commentErr = "Only letters and white space allowed";
     }
   }
 }
