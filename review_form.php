@@ -138,7 +138,7 @@ $formRatingWebsite = $row['rating_website'];
 <center>
 <script>
 
-if (document.getElementsByName('star').value === '') {
+if (document.getElementById('star-5').value === '') {
     document.getElementById('buttonSubmit').disabled = true;
 } else {
     document.getElementById('buttonSubmit').disabled = false;
