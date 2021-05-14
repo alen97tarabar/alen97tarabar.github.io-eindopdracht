@@ -136,6 +136,10 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <br>
 <center>
+<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" disabled value="Klaar">
+</center>
+    </div>
+</div>
 <script>
 
 if (document.getElementById('star-5').value === '') {
@@ -145,10 +149,6 @@ if (document.getElementById('star-5').value === '') {
 }
 
 </script>
-<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" disabled value="Klaar">
-</center>
-    </div>
-</div>
 </form>
 <br>
 <br>
