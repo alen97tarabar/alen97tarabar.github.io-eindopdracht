@@ -151,6 +151,7 @@ $(function(){
             requiredCheckboxes.removeAttr('required');
         } else {
             requiredCheckboxes.attr('required', 'required');
+            document.write(Bent iets vergeten...);
         }
     });
 });
