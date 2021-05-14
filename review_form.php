@@ -136,7 +136,7 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <br>
 <center>
-<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" disabled value="Klaar">
+<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
 </center>
     </div>
 </div>
