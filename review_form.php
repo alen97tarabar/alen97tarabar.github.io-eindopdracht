@@ -99,7 +99,7 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <br>
 <br>
-<form id="formulier" action="action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+<form id="formulier" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
