@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Review Form</title>
 </head>
-<body onload="buttonDisabled()">
+<body onload="ratingDisabled()">
 <style>
 
 body {
