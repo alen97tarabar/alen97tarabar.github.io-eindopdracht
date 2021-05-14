@@ -143,10 +143,10 @@ $formRatingWebsite = $row['rating_website'];
 <script type="text/javascript">
 function ratingDisabled() {
     alert("Hello! I am an alert box!");
-    if (document.getElementsByName('star').value === '') {
-        document.getElementById('buttonSubmit').disabled = true;
-    } else {
+    if (document.getElementsByName('star').checked) {
         document.getElementById('buttonSubmit').disabled = false;
+    } else {
+        document.getElementById('buttonSubmit').disabled = true;
     }
 }
 </script>
