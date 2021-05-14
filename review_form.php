@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Review Form</title>
 </head>
-<body>
+<body onload="buttonDisabled()">
 <style>
 
 body {
@@ -141,13 +141,13 @@ $formRatingWebsite = $row['rating_website'];
     </div>
 </div>
 <script>
-
-if (document.getElementById('star-5').value === '') {
-    document.getElementById('buttonSubmit').disabled = true;
-} else {
-    document.getElementById('buttonSubmit').disabled = false;
+function ratingDisabled() {
+    if (document.getElementById('star-5').value === '') {
+        document.getElementById('buttonSubmit').disabled = true;
+    } else {
+        document.getElementById('buttonSubmit').disabled = false;
+    }
 }
-
 </script>
 </form>
 <br>
