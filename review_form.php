@@ -145,7 +145,7 @@ if (document.getElementById('star-5').value === '') {
 }
 
 </script>
-<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
+<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" disabled value="Klaar">
 </center>
     </div>
 </div>
