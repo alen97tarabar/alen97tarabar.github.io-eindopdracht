@@ -140,7 +140,7 @@ $formRatingWebsite = $row['rating_website'];
 </center>
     </div>
 </div>
-<script>
+<script type="text/javascript">
 function ratingDisabled() {
     if (document.getElementsByClassName('star').value === '') {
         document.getElementById('buttonSubmit').disabled = true;
