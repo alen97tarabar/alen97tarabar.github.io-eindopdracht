@@ -140,6 +140,19 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <center>
 <input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
+<?php 
+
+if (isset($_POST['submit'])) {
+    try {
+        if (!is_numeric($_POST['naam'])) {
+        throw new Exception("Input moet een valide getal zijn");
+        }
+    } catch (Exception $x) {
+        echo "Verkeerde input gevangen: " . $x->getMessage() . PHP_EOL;
+    }
+}
+
+?>
 </center>
     </div>
 </div>
@@ -151,7 +164,6 @@ $(function(){
             requiredCheckboxes.removeAttr('required');
         } else {
             requiredCheckboxes.attr('required', 'required');
-            document.write('Bent iets vergeten...');
         }
     });
 });
