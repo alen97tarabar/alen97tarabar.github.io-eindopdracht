@@ -147,11 +147,11 @@ $formRatingWebsite = $row['rating_website'];
 function ratingDisabled() {
         alert("Hello! I am an alert box!");
         if ($('input[name=star]:checked').length > 0) {
-            document.getElementById('buttonSubmit').disabled = false;
+            document.getElementById('buttonSubmit').disabled = true;
     } else {
-        document.getElementById('buttonSubmit').disabled = true;
+        document.getElementById('buttonSubmit').disabled = false;
     }
-    }
+}
 </script>
 </form>
 <br>
