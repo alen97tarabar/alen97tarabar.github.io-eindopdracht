@@ -103,11 +103,11 @@ $formRatingWebsite = $row['rating_website'];
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
-    <input id="naam" type="text" class="form-control is-valid" name="naam" required>
+    <input id="naam" type="text" class="form-control is-valid" name="naam">
     <span class="error">* <?php echo $nameErr;?></span>
 
     <label for="email"> Email: </label>
-    <input id="email" type="email" class="form-control is-valid" name="email" required>
+    <input id="email" type="email" class="form-control is-valid" name="email">
     <span class="error">* <?php echo $emailErr;?></span>
 
     <label for="functie"> Functie: </label>
