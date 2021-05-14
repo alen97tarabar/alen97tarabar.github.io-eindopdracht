@@ -99,7 +99,7 @@ $formRatingWebsite = $row['rating_website'];
 <br>
 <br>
 <br>
-<form id="formulier" action="review_form_stmt_insert.php" method="post">
+<form id="formulier" action="action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
@@ -146,8 +146,8 @@ $formRatingWebsite = $row['rating_website'];
 <input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $emailErr = $functieErr = $commentErr = "";
+$name = $email = $functie = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -189,6 +189,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $commentErr = "Only letters and white space allowed";
     }
   }
+}
+
+//HERE IS THE DB INSERT QUERY
+if (isset($_POST['submit'])){
+    try {
+        include('db_connection.php');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $naamInsert = $_POST['naam'];
+        $emailInsert = $_POST['email'];
+        $functieInsert = $_POST['functie'];
+        $datumInsert = $_POST['datum'];
+        $commentaarInsert = $_POST['commentaar'];
+        $ratingCvInsert = $_POST['rating_cv'];
+        $ratingWebsiteInsert = $_POST['star'];
+
+        $stmtInsert = $db->prepare("INSERT INTO formulier
+        (naam, email, functie, datum, commentaar, rating_cv, rating_website)
+        VALUES (:naam, :email, :functie, :datum, :commentaar, :rating_cv, :rating_website);"); 
+
+        $stmtInsert->bindParam(':naam', $naamInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':email', $emailInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':functie', $functieInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':datum', $datumInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':commentaar', $commentaarInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':rating_cv', $ratingCvInsert, PDO::PARAM_STR);
+        $stmtInsert->bindParam(':rating_website', $ratingWebsiteInsert, PDO::PARAM_STR);
+
+        $stmtInsert->execute();
+        echo "<h1> Bedankt voor de review! </h1> <br> <a href='index.php'> HOME </a>";
+
+    } catch(PDOException $e)
+    {
+        echo "Error: " . $e->getMessage();
+    }
+
+    $db->close();
 }
 ?>
 </center>
