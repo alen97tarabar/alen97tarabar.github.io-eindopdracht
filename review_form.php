@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Review Form</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body onload="ratingDisabled()">
 <style>
@@ -140,7 +143,7 @@ $formRatingWebsite = $row['rating_website'];
 </center>
     </div>
 </div>
-<script type="text/javascript">
+<script>
 function ratingDisabled() {
     alert("Hello! I am an alert box!");
     if ($('input[name=star]:checked').length > 0) {
