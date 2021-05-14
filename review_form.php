@@ -136,16 +136,16 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <br>
 <center>
-<?php 
+<script>
 
-if (isset($_POST['star'])) {
-
+if (document.getElementsByName('star').value ==='') {
+    document.getElementsByName('submit').disabled = true;
 } else {
-    echo "<br> Vergeet niet de website beoordeling!";
+    document.getElementsByName('submit').disabled = false;
 }
 
-?>
-<input type="submit" class="btn btn-primary" name="submit" <?php if ($_POST['star'] == '') { ?> disabled <?php   } elseif (!empty($_POST)) { ?> enabled <?php } ?> value="Klaar">
+</script>
+<input type="submit" class="btn btn-primary" name="submit" disabled> value="Klaar">
 </center>
     </div>
 </div>
