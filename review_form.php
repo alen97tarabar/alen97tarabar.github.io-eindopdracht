@@ -139,13 +139,13 @@ $formRatingWebsite = $row['rating_website'];
 <script>
 
 if (document.getElementsByName('star').value === '') {
-    document.getElementsByName('submit').disabled = true;
+    document.getElementById('buttonSubmit').disabled = true;
 } else {
-    document.getElementsByName('submit').disabled = false;
+    document.getElementById('buttonSubmit').disabled = false;
 }
 
 </script>
-<input type="submit" class="btn btn-primary" name="submit" value="Klaar">
+<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
 </center>
     </div>
 </div>
