@@ -139,20 +139,16 @@ $formRatingWebsite = $row['rating_website'];
 </div>
 <br>
 <center>
-<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">
+<?php 
+if (isset($_POST['star'])) {
+    echo '<input type="submit" class="btn btn-primary" id="buttonSubmit" name="submit" value="Klaar">';
+ } else {
+     echo "Vul alles goed in...";
+ }
+?>
 </center>
     </div>
 </div>
-<script>
-function ratingDisabled() {
-        alert("Hello! I am an alert box!");
-        if ($('input[name=star]:checked').length > 0) {
-            document.getElementById('buttonSubmit').disabled = true;
-    } else {
-        document.getElementById('buttonSubmit').disabled = false;
-    }
-}
-</script>
 </form>
 <br>
 <br>
