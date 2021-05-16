@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<a href='index.php'> Terug naar de Home pagina </a>";
     echo $countNoErr;
   }
-  if ($countNoErr == 4){
+  if ($countNoErr = 4){
     try {
         include('db_connection.php');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
