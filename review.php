@@ -109,7 +109,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     $aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
 
-    echo "<h2 id='cijfer'> Gemiddelde cijfer </h2> <br> website: " . round(($totaalReviewRatingWebsite / $aantalRows),2) . " <br> CV: " . round(($totaalReviewRatingCV / $aantalRows),2) . "<a href='#gemiddeld'> <i class='fas fa-angle-double-up' style='font-size: 3rem'></i></a>";
+    echo "<h2 id='cijfer'> Gemiddelde cijfer </h2> <br> website: " . round(($totaalReviewRatingWebsite / $aantalRows),2) . " <br> CV: " . round(($totaalReviewRatingCV / $aantalRows),2) . 
+    "<br> <a href='#gemiddeld'> <i class='fas fa-angle-double-up' style='font-size: 3rem; color: black'></i></a>";
 
 ?>
 
