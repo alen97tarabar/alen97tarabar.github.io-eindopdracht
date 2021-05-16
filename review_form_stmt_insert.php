@@ -4,65 +4,69 @@
 $nameErr = $emailErr = $functieErr = "";
 $name = $email = $functie = $comment = "";
 
-$countNoErr = 0;
+$countErr = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["naam"])) {
     $nameErr = "Name is required";
     echo "Name is required";
+    $countErr++;
   } else {
     $name = test_input($_POST["naam"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
       echo "Alleen letters en spaties toegestaan in Naam <br>";
+      $countErr++;
     }
-    $countNoErr++;
   }
 
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
     echo "email is required";
+    $countErr++;
   } else {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
       echo "Email in verkeerde format <br>";
+      $countErr++;
     }
-    $countNoErr++;
   }
 
   if (empty($_POST["functie"])) {
     $functieErr = "Functie is required";
     echo "Functie is required";
+    $countErr++;
   } else {
     $functie = test_input($_POST["functie"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$functie)) {
       $functieErr = "Only letters and white space allowed";
       echo "Alleen letters en spaties toegestaan in Functie <br>";
+      $countErr++;
     }
-    $countNoErr++;
   }
 
   if (empty($_POST["commentaar"])) {
     $comment = "";
     echo "Comment is required";
+    $countErr++;
   } else {
     $comment = test_input($_POST["commentaar"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
         $commentErr = "Only letters and white space allowed";
         echo "Alleen letters en spaties toegestaan in Feedbaack <br>";
+        $countErr++;
     }
-    $countNoErr++;
   }
 
     echo "<a href='index.php'> Terug naar de Home pagina </a><br>";
     echo "Totale Errors: " . $countNoErr;
 
-  if ($countNoErr == 4){
+  if ($countNoErr == 0){
     try {
         include('db_connection.php');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
