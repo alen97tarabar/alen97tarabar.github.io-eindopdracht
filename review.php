@@ -70,7 +70,7 @@ $(document).ready(function(){
 </script>
 
 <br>
-<a href="#cijfer" style="color: black">Gemiddelde cijfer </a>
+<a href="#cijfer" style="color: black !important">Gemiddelde cijfer </a>
 <div class="container">
 
 <div class="item">
