@@ -1,7 +1,74 @@
 <?php
 
+// define variables and set to empty values
+$nameErr = $emailErr = $functieErr = "";
+$name = $email = $functie = $comment = "";
 
-if (isset($_POST['submit'])){
+$countNoErr = 0;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+    echo "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    $countNoErr ++;
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+      echo "Only letters and white space allowed <br>";
+    }
+  }
+
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+    echo "email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    $countNoErr ++;
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+      echo "Invalid email format <br>";
+    }
+  }
+
+  if (empty($_POST["functie"])) {
+    $functieErr = "Functie is required";
+    echo "Functie is required";
+  } else {
+    $functie = test_input($_POST["functie"]);
+    $countNoErr ++;
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$functie)) {
+      $functieErr = "Only letters and white space allowed";
+      echo "Only letters and white space allowed <br>";
+    }
+  }
+
+  if (empty($_POST["commentaar"])) {
+    $comment = "";
+    echo "Comment is required";
+  } else {
+    $comment = test_input($_POST["commentaar"]);
+    $countNoErr ++;
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
+        $commentErr = "Only letters and white space allowed";
+        echo "Only letters and white space allowed <br>";
+    }
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+if ($countNoErr == 4){
     try {
         include('db_connection.php');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
