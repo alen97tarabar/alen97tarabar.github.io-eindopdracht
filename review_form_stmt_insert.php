@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $commentErr = "Only letters and white space allowed";
         echo "Only letters and white space allowed <br>";
     }
-    $countNoErr ++;
+    $countNoErr + 10;
   }
 
     echo "<a href='index.php'> Terug naar de Home pagina </a><br>";
