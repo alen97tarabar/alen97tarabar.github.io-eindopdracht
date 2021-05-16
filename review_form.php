@@ -101,7 +101,7 @@ $action = htmlspecialchars("review_form_stmt_insert.php", ENT_QUOTES);
 <br>
 <br>
 <br>
-<form id="formulier" action="<?php $action;?>">
+<form id="formulier" action="<?php echo $action;?>">
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
