@@ -58,18 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Only letters and white space allowed <br>";
     }
     echo "<a href='index.php'> Terug naar de Home pagina </a>";
+    echo $countNoErr;
   }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-
-if ($countNoErr == 4){
+  if ($countNoErr == 4){
     try {
         include('db_connection.php');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -103,5 +94,13 @@ if ($countNoErr == 4){
     }
 
     $db->close();
+}
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
 }
 ?>
