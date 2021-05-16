@@ -7,11 +7,11 @@ $name = $email = $functie = $comment = "";
 $countNoErr = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
+  if (empty($_POST["naam"])) {
     $nameErr = "Name is required";
     echo "Name is required";
   } else {
-    $name = test_input($_POST["name"]);
+    $name = test_input($_POST["naam"]);
     $countNoErr ++;
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
@@ -57,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $commentErr = "Only letters and white space allowed";
         echo "Only letters and white space allowed <br>";
     }
+    echo "<a href='index.php'> Terug naar de Home pagina </a>";
   }
 }
 
