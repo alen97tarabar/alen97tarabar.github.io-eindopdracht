@@ -7,7 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body onload="ratingDisabled()">
+<body onload="ratingDisabled()" style="background-color: white !important">
 <style>
 
 body {

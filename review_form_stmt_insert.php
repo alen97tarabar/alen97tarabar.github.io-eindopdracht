@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-    echo "<a href='index.php'> Terug naar de Home pagina! </a><br>";
+    echo "<a href='index.php'> Terug </a><br><br><br>";
     if ($countErr > 0) {
         echo "Totale Errors: " . $countErr;
     }
