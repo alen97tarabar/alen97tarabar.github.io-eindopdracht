@@ -94,12 +94,14 @@ $formComment = $row['commentaar'];
 $formRatingCv = $row['rating_cv'];
 $formRatingWebsite = $row['rating_website'];
 
+$action = htmlspecialchars("review_form_stmt_insert.php", ENT_QUOTES);
+
 ?>
 
 <br>
 <br>
 <br>
-<form id="formulier" action="review_form_stmt_insert.php" method="post">
+<form id="formulier" action="<?php echo $action;?>">
 <div class="form-row">
 <div class="col-md-2 mb-1">
     <label for="naam"> Naam: </label>
