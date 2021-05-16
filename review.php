@@ -70,7 +70,7 @@ $(document).ready(function(){
 </script>
 
 <br>
-<a href="#cijfer" style="color: black !important">Gemiddelde cijfer </a>
+<a id ="gemiddeld" href="#cijfer" style="color: black !important">Gemiddelde cijfer </a>
 <div class="container">
 
 <div class="item">
@@ -109,7 +109,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     $aantalRows = $db->query('select count(*) from formulier')->fetchColumn(); 
 
-    echo "<h2 id='cijfer'> Gemiddelde cijfer </h2> <br> website: " . round(($totaalReviewRatingWebsite / $aantalRows),2) . " <br> CV: " . round(($totaalReviewRatingCV / $aantalRows),2);
+    echo "<h2 id='cijfer'> Gemiddelde cijfer </h2> <br> website: " . round(($totaalReviewRatingWebsite / $aantalRows),2) . " <br> CV: " . round(($totaalReviewRatingCV / $aantalRows),2) . "<a href='#gemiddeld'> <i class='fas fa-angle-double-up' style='font-size: 3rem'></i></a>";
 
 ?>
 
