@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
-      echo "Alleen letters en spaties toegestaan in Naam <br>";
+      echo $name . " : Alleen letters en spaties toegestaan <br>";
       $countErr++;
     }
   }
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
-      echo "Email in verkeerde format <br>";
+      echo $email . " : in verkeerde format <br>";
       $countErr++;
     }
   }
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$functie)) {
       $functieErr = "Only letters and white space allowed";
-      echo "Alleen letters en spaties toegestaan in Functie <br>";
+      echo $functie . " : Alleen letters en spaties toegestaan <br>";
       $countErr++;
     }
   }
@@ -58,13 +58,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
         $commentErr = "Only letters and white space allowed";
-        echo "Alleen letters en spaties toegestaan in Feedbaack <br>";
+        echo $comment . " : Alleen letters en spaties toegestaan <br>";
         $countErr++;
     }
   }
 
-    echo "<a href='index.php'> Terug naar de Home pagina </a><br>";
-    echo "Totale Errors: " . $countErr;
+    echo "<a href='index.php'> Terug naar de Home pagina! </a><br>";
+    if ($countErr > 0) {
+        echo "Totale Errors: " . $countErr;
+    }
 
   if ($countErr == 0){
     try {
