@@ -1,47 +1,41 @@
 <?php
 
-// define variables and set to empty values
-$nameErr = $emailErr = $functieErr = "";
+// FORM VALIDATION
 $name = $email = $functie = $comment = "";
 
 $countErr = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["naam"])) {
-    $nameErr = "Name is required";
-    echo "Name is required";
+    echo "Naam is verplicht";
     $countErr++;
   } else {
     $name = test_input($_POST["naam"]);
-    // check if name only contains letters and whitespace
+    // VALIDATION
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
       echo $name . " : Alleen letters en spaties toegestaan <br>";
       $countErr++;
     }
   }
 
   if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-    echo "email is required";
+    echo "Email is verplicht";
     $countErr++;
   } else {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
+    // EMAIL VALIDATION
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
       echo $email . " : in verkeerde format <br>";
       $countErr++;
     }
   }
 
   if (empty($_POST["functie"])) {
-    $functieErr = "Functie is required";
-    echo "Functie is required";
+    echo "Functie is verplicht";
     $countErr++;
   } else {
     $functie = test_input($_POST["functie"]);
-    // check if name only contains letters and whitespace
+    // VALIDATION
     if (!preg_match("/^[a-zA-Z-' ]*$/",$functie)) {
       $functieErr = "Only letters and white space allowed";
       echo $functie . " : Alleen letters en spaties toegestaan <br>";
@@ -51,13 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (empty($_POST["commentaar"])) {
     $comment = "";
-    echo "Comment is required";
+    echo "Feedback is verplicht";
     $countErr++;
   } else {
     $comment = test_input($_POST["commentaar"]);
-    // check if name only contains letters and whitespace
+    // VALIDATION
     if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
-        $commentErr = "Only letters and white space allowed";
         echo $comment . " : Alleen letters en spaties toegestaan <br>";
         $countErr++;
     }
